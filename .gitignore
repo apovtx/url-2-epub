@@ -118,7 +118,7 @@ dist
 *.epub
 # DynamoDB Local files
 .dynamodb/
-
+bin
 # TernJS port file
 .tern-port
 

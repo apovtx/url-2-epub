@@ -1,12 +1,14 @@
 {
   "name": "scrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates an epub file from a webpage",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "bun build ./index.js --compile --outfile extract-epub",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "bun build ./index.js --compile --outfile bin/extract-epub",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version",
+    "push-release": "git push --follow-tags origin main"
   },
   "keywords": [],
   "author": "Apostolos Voulkidis",
@@ -14,7 +16,8 @@
   "dependencies": {
     "@mozilla/readability": "^0.6.0",
     "axios": "^1.9.0",
-    "jsdom": "^26.1.0"
+    "jsdom": "^26.1.0",
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
     "cac": "^6.7.14"
